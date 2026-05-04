@@ -7,14 +7,16 @@
     --text: #94a3b8;
     --white: #ffffff;
     --border: rgba(255, 255, 255, 0.08);
+    --contorno: rgba(255, 255, 255, 0.2);
 }
 [data-theme='light'] {
     --bg: #ffffff;
-    --text: #8592a3;
+    --text: #5f6b7a;
     --border: rgba(0, 0, 0, 0.08);
     --nav-bg: #ffffffcc;
     --card-bg: #f0f0f0;
-    --white: #000000;
+    --white: #333333;
+    --contorno: rgba(0, 0, 0, 0.11);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,6 +32,56 @@ body {
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 .text-white { color: var(--white); }
 .accent { color: var(--accent); }
+
+/* --- TEXTO FONDO --- */
+
+.marquee-container {
+    position: absolute;
+    width: 90%;
+    overflow: hidden; /* Esconde lo que sale de la pantalla */
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content; /* Permite que el contenido se extienda horizontalmente */
+  animation: cinta-derecha 35s linear infinite;
+}
+
+.marquee-content-2 {
+  display: flex;
+  width: max-content; /* Permite que el contenido se extienda horizontalmente */
+  animation: cinta-izquierda 35s linear infinite;
+}
+
+.marquee-container span{
+  padding: 0 50px;
+  font-size: 60px;
+  font-weight: bold;
+  /* Aquí puedes añadir el contorno y la no-selección que aprendimos antes: */
+  -webkit-text-stroke: 1px var(--contorno);
+  color: transparent;
+  user-select: none;
+}
+
+@keyframes cinta-derecha {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes cinta-izquierda {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /* --- NAVEGACIÓN --- */
 .navbar {
@@ -83,7 +135,7 @@ body {
 .show-scroll { opacity: 1; transform: translateY(0); }
 
 /* --- SECCIONES COMUNES --- */
-.section { padding: 100px 0; }
+.section { padding: 250px 0 150px; }
 .title { font-size: 2rem; color: var(--white); margin-bottom: 3rem; font-style: italic; }
 
 /* --- SOBRE MÍ (Solución del grid desordenado) --- */
@@ -101,6 +153,7 @@ body {
 /* --- PROYECTOS --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
 .project-card { background: var(--card-bg); border-radius: 15px; border: 1px solid var(--border); overflow: hidden; transition: 0.4s; }
+.project-card { color: var(--white); }
 .project-card:hover { transform: translateY(-10px); border-color: var(--accent); }
 .project-img { height: 220px; background: #1a1a2e; } /* Placeholder */
 .project-info { padding: 1.5rem; }

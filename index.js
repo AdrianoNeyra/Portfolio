@@ -14,21 +14,25 @@ const btn = document.getElementById("theme-toggle");
 const icon = document.getElementById("theme-icon");
 const currentTheme = localStorage.getItem("theme");
 
-// Si ya había una preferencia guardada, la aplicamos
+// 1. Al cargar: Si el usuario guardó "light", aplicamos claro. 
+// De lo contrario, no hacemos nada (se queda el oscuro por defecto del CSS)
 if (currentTheme === "light") {
   document.documentElement.setAttribute("data-theme", "light");
+  icon.classList.replace("fa-moon", "fa-sun");
 }
 
 btn.addEventListener("click", () => {
   let theme = document.documentElement.getAttribute("data-theme");
   
   if (theme === "light") {
+    // CAMBIAR A OSCURO (Remover el atributo light)
     document.documentElement.removeAttribute("data-theme");
-    localStorage.setItem("theme", "light");
+    localStorage.setItem("theme", "dark");
     icon.classList.replace("fa-sun", "fa-moon");
   } else {
+    // CAMBIAR A CLARO
     document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "light");
     icon.classList.replace("fa-moon", "fa-sun");
   }
 });
