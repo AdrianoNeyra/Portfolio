@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Adriano</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <nav class="navbar">
+        <div class="logo">PORTFOLIO<span class="accent">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+            <button id="theme-toggle">
+                <i id="theme-icon" class="fa-regular fa-moon fa-xl"></i>
+            </button>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-text">
+            <span class="badge">Disponible para trabajar</span>
+            <h1>Hola, soy <span class="text-white">Adriano.</span></h1>
+            <h2 class="typing">Full Stack Developer</h2>
+            <p>Transformo ideas en experiencias digitales de alto rendimiento. Especializado en arquitecturas escalables y diseño minimalista.</p>
+            <div class="cta-group">
+                <a href="#projects" class="btn-main">Explorar Proyectos</a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mí -->
+    <section id="about" class="section hidden-scroll">
+        <div class="container">
+            <h2 class="title">/ Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Llevo más de 2 años escribiendo código que no solo funciona, sino que escala. Mi enfoque se centra en la <strong>eficiencia del backend</strong> y la <strong>estética del frontend</strong>.</p>
+                    <p style="margin-top: 1rem;">Cuando no estoy programando, me gusta contribuir al open source o aprender sobre nuevas tendencias en IA y Web3.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item"><span>5</span> Proyectos completados</div>
+                    <div class="stat-item"><span>2+</span> Años de experiencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section hidden-scroll">
+        <div class="container">
+            <h2 class="title">/ Tecnologías</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-bar"><div class="progress" style="width: 90%;"><span>HTML / CSS</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 85%;"><span>JavaScript</span></div></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-bar"><div class="progress" style="width: 80%;"><span>Python</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 80%;"><span>MySQL</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section hidden-scroll">
+        <div class="container">
+            <h2 class="title">/ Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>Bookio</h3>
+                        <p>Plataforma de lectura y creación de eBooks.</p>
+                        <div class="tags"><span>HTML</span> <span>CSS</span> <span>JS</span> <span>Python</span> <span>MySQL</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: #1e293b;"></div>
+                    <div class="project-info">
+                        <h3>Chatbot con IA</h3>
+                        <p>Panel de control para gestión de datos masivos.</p>
+                        <div class="tags"><span>HTML</span> <span>CSS</span> <span>JS</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: #1e293b;"></div>
+                    <div class="project-info">
+                        <h3>Organizador de Eventos en Calendario</h3>
+                        <p>Panel de control para gestión de datos masivos.</p>
+                        <div class="tags"><span>HTML</span> <span>CSS</span> <span>JS</span> <span>Python</span> <span>MySQL</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: #1e293b;"></div>
+                    <div class="project-info">
+                        <h3>Organizador de Facturas</h3>
+                        <p>Panel de control para gestión de datos masivos.</p>
+                        <div class="tags"><span>HTML</span> <span>CSS</span> <span>JS</span> <span>Python</span> <span>MySQL</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: #1e293b;"></div>
+                    <div class="project-info">
+                        <h3>Gestor de Reservas de Restaurante</h3>
+                        <p>En desarrollo...</p>
+                        <div class="tags"><span>HTML</span> <span>CSS</span> <span>JS</span> <span>Python</span> <span>MySQL</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contacto Section -->
+    <section id="contacto" class="section hidden-scroll">
+        <div class="container">
+            <h2 class="title">/ Contacto</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>¿Tienes un proyecto en mente?</h3>
+                    <p>Actualmente estoy disponible para trabajo freelance y nuevas oportunidades. Envíame un mensaje y hablemos sobre cómo puedo aportar valor a tu equipo.</p>
+                    <div class="contact-details">
+                        <p>📧 adrianoneyra2007@gmail.com</p>
+                        <p>📍 Portugal</p>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="0bfb8f70-3916-4d54-b460-b861fc79a4a2">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Tu Correo" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Diseñado por Adriano</p>
+    </footer>
+    <div class="floating-container">
+        <a href="#contacto" class="float-btn mail">
+            <img src="/img/gmail_icon.png" alt="" style="height: 22px;">
+        </a>
+        <a href="https://instagram.com/adr.neyra" class="float-btn instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/in/adriano-neyra" class="float-btn linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    
+    <script src="/index.js"></script>
+</body>
+</html>
